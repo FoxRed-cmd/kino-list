@@ -1,5 +1,6 @@
 import { classNames } from "src/shared/lib/classNames/classNames";
 import cls from "./CardImage.module.scss";
+import { memo } from "react";
 
 interface CardImageProps {
   className?: string;
@@ -9,7 +10,7 @@ interface CardImageProps {
   height?: string | number;
 }
 
-export const CardImage = (props: CardImageProps) => {
+export const CardImage = memo((props: CardImageProps) => {
   const { src, alt, className = "", width, height } = props;
   return (
     <img
@@ -19,4 +20,4 @@ export const CardImage = (props: CardImageProps) => {
       className={classNames(cls.poster, [className])}
     />
   );
-};
+});

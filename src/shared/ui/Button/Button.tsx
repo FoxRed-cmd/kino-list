@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { ReactNode, memo } from "react";
 import cls from "./Button.module.scss";
 import { classNames } from "src/shared/lib/classNames/classNames";
 
@@ -8,7 +8,7 @@ interface ButtonProps {
   children?: ReactNode;
 }
 
-export const Button = (props: ButtonProps) => {
+export const Button = memo((props: ButtonProps) => {
   const { children, className, onClick } = props;
   return (
     <button
@@ -18,4 +18,4 @@ export const Button = (props: ButtonProps) => {
       {children}
     </button>
   );
-};
+});

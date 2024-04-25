@@ -1,6 +1,6 @@
 import { classNames } from "src/shared/lib/classNames/classNames";
 import cls from "./CardText.module.scss";
-import { ReactNode } from "react";
+import { ReactNode, memo } from "react";
 
 interface CardTextProps {
   className?: string;
@@ -8,7 +8,7 @@ interface CardTextProps {
   textAlign?: any;
 }
 
-export const CardText = (props: CardTextProps) => {
+export const CardText = memo((props: CardTextProps) => {
   const { children, className = "", textAlign } = props;
   return (
     <div
@@ -18,4 +18,4 @@ export const CardText = (props: CardTextProps) => {
       {children}
     </div>
   );
-};
+});

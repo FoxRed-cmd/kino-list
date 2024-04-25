@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, memo } from "react";
 import cls from "./ToggleButton.module.scss";
 import { classNames } from "src/shared/lib/classNames/classNames";
 
@@ -9,7 +9,7 @@ interface ToggleButtonProps {
   className?: string;
 }
 
-export const ToggleButton: FC<ToggleButtonProps> = (props) => {
+export const ToggleButton: FC<ToggleButtonProps> = memo((props) => {
   const { isToggle = false, onClick, children, className = "" } = props;
   return (
     <button
@@ -21,4 +21,4 @@ export const ToggleButton: FC<ToggleButtonProps> = (props) => {
       </div>
     </button>
   );
-};
+});
