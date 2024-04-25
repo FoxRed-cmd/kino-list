@@ -1,0 +1,35 @@
+.ToggleButton {
+  width: 42px;
+  height: 24px;
+
+  border-radius: 20px;
+  border: none;
+
+  background-color: var(--bg-color);
+
+  position: relative;
+}
+
+.switch {
+  width: 20px;
+  height: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--bg-accent-color);
+
+  border-radius: 20px;
+
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  bottom: 2px;
+
+  transition: left 100ms;
+}
+
+.is_toggle {
+  left: 20px;
+}
