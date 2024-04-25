@@ -11,3 +11,14 @@
 
   min-height: 100vh;
 }
+
+h1 {
+  font: var(--font-l);
+}
+
+.container {
+  max-width: 1200px;
+  text-align: center;
+
+  margin: 0 auto;
+}

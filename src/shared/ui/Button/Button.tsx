@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 import cls from "./Button.module.scss";
+import { classNames } from "src/shared/lib/classNames/classNames";
 
 interface ButtonProps {
   className?: string;
@@ -8,9 +9,12 @@ interface ButtonProps {
 }
 
 export const Button = (props: ButtonProps) => {
-  const { children, onClick } = props;
+  const { children, className, onClick } = props;
   return (
-    <button className={cls.Button} onClick={onClick}>
+    <button
+      className={classNames(cls.Button, [className ?? ""])}
+      onClick={onClick}
+    >
       {children}
     </button>
   );

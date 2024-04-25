@@ -1,5 +1,5 @@
 import { classNames } from "src/shared/lib/classNames/classNames";
-import cls from "./CardText.module.scss";
+import cls from "./CardTitle.module.scss";
 import { ReactNode } from "react";
 
 interface CardTextProps {
@@ -8,12 +8,12 @@ interface CardTextProps {
   textAlign?: any;
 }
 
-export const CardText = (props: CardTextProps) => {
+export const CardTitle = (props: CardTextProps) => {
   const { children, className = "", textAlign } = props;
   return (
     <div
       style={{ textAlign }}
-      className={classNames(cls.cardText, [className])}
+      className={classNames(cls.cardTitle, [className])}
     >
       {children}
     </div>

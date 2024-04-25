@@ -3,6 +3,7 @@ import { Navbar } from "../widgets/Navbar";
 import { useTheme } from "./providers/ThemeProvider";
 import "./styles/main.scss";
 import { AppRouter } from "./providers/router";
+import { Footer } from "src/widgets/Footer";
 
 function App() {
   const { theme } = useTheme();
@@ -11,6 +12,7 @@ function App() {
     <div className={classNames("app", [theme])}>
       <Navbar />
       <AppRouter />
+      <Footer />
     </div>
   );
 }

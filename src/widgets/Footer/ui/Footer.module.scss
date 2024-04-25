@@ -1,0 +1,10 @@
+.Footer {
+  background-color: var(--bg-accent-color);
+  color: var(--primary-color);
+
+  width: 100%;
+  height: var(--footer-height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

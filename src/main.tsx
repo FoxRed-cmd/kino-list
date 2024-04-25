@@ -1,13 +1,16 @@
 import ReactDOM from "react-dom/client";
 import "./app/styles/reset.scss";
 import App from "./app/App.tsx";
-import { ThemeProvider } from "./app/providers/ThemeProvider/index.ts";
+import { ThemeProvider } from "src/app/providers/ThemeProvider";
 import { BrowserRouter } from "react-router-dom";
+import { QueryProvider } from "src/app/providers/QueryProvider";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <BrowserRouter>
-    <ThemeProvider>
-      <App />
-    </ThemeProvider>
+    <QueryProvider>
+      <ThemeProvider>
+        <App />
+      </ThemeProvider>
+    </QueryProvider>
   </BrowserRouter>
 );

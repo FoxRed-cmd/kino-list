@@ -5,11 +5,18 @@ interface CardImageProps {
   className?: string;
   src: string;
   alt: string;
+  width?: string | number;
+  height?: string | number;
 }
 
 export const CardImage = (props: CardImageProps) => {
-  const { src, alt, className = "" } = props;
+  const { src, alt, className = "", width, height } = props;
   return (
-    <img src={src} alt={alt} className={classNames(cls.poster, [className])} />
+    <img
+      src={src}
+      alt={alt}
+      style={{ width, height }}
+      className={classNames(cls.poster, [className])}
+    />
   );
 };

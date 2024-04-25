@@ -1,0 +1,16 @@
+.Pagination {
+  padding: 10px;
+}
+
+.select {
+  background-color: var(--primary-color);
+  color: var(--bg-accent-color);
+}
+
+.select:hover {
+  background-color: var(--secondary-color);
+}
+
+.select:active {
+  background-color: var(--active-color);
+}
