@@ -5,6 +5,7 @@ import { PageLoader } from "src/shared/ui/PageLoader/PageLoader";
 import { MovieDetailsCard } from "src/widgets/MovieDetailsCard";
 import { MovieList, MovieLitsType } from "src/widgets/MovieList";
 import { fetchRecommendedMovies } from "../model/services/fetchRecommendedMovies";
+import { ErrorPage } from "src/pages/ErrorPage";
 
 const MovieDetailsPage = () => {
   const { id } = useParams();
@@ -24,6 +25,7 @@ const MovieDetailsPage = () => {
   );
 
   if (movieDetailsQuery.isError) {
+    return <ErrorPage />;
   }
 
   if (movieDetailsQuery.isLoading || recommendedMoviesQuery.isLoading) {
