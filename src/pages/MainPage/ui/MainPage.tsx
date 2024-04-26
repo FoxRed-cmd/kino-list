@@ -5,6 +5,7 @@ import { Pagination } from "src/widgets/Pagination";
 import { PageLoader } from "src/shared/ui/PageLoader/PageLoader";
 import { ErrorPage } from "src/pages/ErrorPage";
 import { usePagination } from "src/shared/lib/classNames/usePagination";
+import { useScrollToTop } from "src/shared/lib/classNames/useScrollToTop";
 
 const MainPage = () => {
   const { page, onPageChange } = usePagination();
@@ -15,6 +16,7 @@ const MainPage = () => {
       refetchOnWindowFocus: false,
     }
   );
+  useScrollToTop([page]);
 
   if (isError) {
     return <ErrorPage />;

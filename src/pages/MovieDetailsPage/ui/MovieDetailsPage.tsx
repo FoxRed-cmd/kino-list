@@ -6,9 +6,11 @@ import { MovieDetailsCard } from "src/widgets/MovieDetailsCard";
 import { MovieList, MovieLitsType } from "src/widgets/MovieList";
 import { fetchRecommendedMovies } from "../model/services/fetchRecommendedMovies";
 import { ErrorPage } from "src/pages/ErrorPage";
+import { useScrollToTop } from "src/shared/lib/classNames/useScrollToTop";
 
 const MovieDetailsPage = () => {
   const { id } = useParams();
+  useScrollToTop([id]);
   const movieDetailsQuery = useQuery(
     ["movie", id],
     () => fetchMovieDetails(Number(id)),
