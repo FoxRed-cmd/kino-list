@@ -1,21 +1,13 @@
 import { MovieList, MovieLitsType } from "src/widgets/MovieList";
 import { fetchTopRatedMovies } from "../model/services/fetchTopRatedMovies";
 import { useQuery } from "react-query";
-import { useState } from "react";
 import { Pagination } from "src/widgets/Pagination";
 import { PageLoader } from "src/shared/ui/PageLoader/PageLoader";
 import { ErrorPage } from "src/pages/ErrorPage";
+import { usePagination } from "src/shared/lib/classNames/usePagination";
 
 const MainPage = () => {
-  const [page, setPage] = useState(
-    Number(localStorage.getItem("lastPage") ?? 1)
-  );
-
-  const onPageChange = (page: number) => {
-    setPage(page);
-    localStorage.setItem("lastPage", page.toString());
-  };
-
+  const { page, onPageChange } = usePagination();
   const { data, isLoading, isSuccess, isError } = useQuery(
     ["topMovies", page],
     () => fetchTopRatedMovies("ru-RU", page),
