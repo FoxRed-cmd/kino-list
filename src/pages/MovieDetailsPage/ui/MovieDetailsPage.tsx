@@ -1,10 +1,13 @@
 import { useQuery } from "react-query";
 import { useParams } from "react-router-dom";
-import { fetchMovieDetails } from "../model/services/fetchMovieDetails";
 import { PageLoader } from "src/shared/ui/PageLoader/PageLoader";
-import { MovieDetailsCard } from "src/widgets/MovieDetailsCard";
-import { MovieList, MovieLitsType } from "src/widgets/MovieList";
-import { fetchRecommendedMovies } from "../model/services/fetchRecommendedMovies";
+import {
+  MovieList,
+  MovieDetailsCard,
+  MovieLitsType,
+  fetchMovieDetails,
+  fetchRecommendedMovies,
+} from "src/entities/Movie";
 import { ErrorPage } from "src/pages/ErrorPage";
 import { useScrollToTop } from "src/shared/lib/classNames/useScrollToTop";
 

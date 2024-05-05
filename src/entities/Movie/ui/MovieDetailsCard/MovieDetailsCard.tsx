@@ -1,5 +1,5 @@
 import { Card } from "src/shared/ui/Card/Card";
-import { MovieLitsType } from "../../MovieList";
+import { MovieLitsType } from "../../model/types/MovieListType";
 import { CardImage } from "src/shared/ui/CardImage/CardImage";
 import { IMAGE_BASE_URL } from "src/shared/api/api";
 import { Row } from "src/shared/ui/Row/Row";

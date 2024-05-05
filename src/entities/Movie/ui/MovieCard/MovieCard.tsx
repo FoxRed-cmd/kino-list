@@ -4,7 +4,7 @@ import { Card } from "src/shared/ui/Card/Card";
 import { CardImage } from "src/shared/ui/CardImage/CardImage";
 import { CardText } from "src/shared/ui/CardText/CardText";
 import { CardTitle } from "src/shared/ui/CardTitle/CardTitle";
-import { MovieLitsType } from "src/widgets/MovieList";
+import { MovieLitsType } from "../../model/types/MovieListType";
 import cls from "./MovieCard.module.scss";
 
 interface MovieCardProps {

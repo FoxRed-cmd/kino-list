@@ -1,5 +1,4 @@
-import { MovieList, MovieLitsType } from "src/widgets/MovieList";
-import { fetchTopRatedMovies } from "../model/services/fetchTopRatedMovies";
+import { MovieList, MovieLitsType, fetchTopRatedMovies } from "src/entities/Movie";
 import { useQuery } from "react-query";
 import { Pagination } from "src/widgets/Pagination";
 import { PageLoader } from "src/shared/ui/PageLoader/PageLoader";
